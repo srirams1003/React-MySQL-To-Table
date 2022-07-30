@@ -8,6 +8,7 @@ const knex = require('knex')({
   connection: {
     host     : dbConfig.HOST,
     user     : dbConfig.USER,
+    port     : dbConfig.PORT,
     password : dbConfig.PASSWORD,
     database : dbConfig.DB,
     charset  : 'utf8'

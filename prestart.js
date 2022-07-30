@@ -28,6 +28,7 @@ const knex = require('knex')({
   client: dbConfig.dialect,
   connection: {
     host     : dbConfig.HOST,
+    port     : dbConfig.PORT,
     user     : dbConfig.USER,
     password : dbConfig.PASSWORD,
     database : dbConfig.DB,
