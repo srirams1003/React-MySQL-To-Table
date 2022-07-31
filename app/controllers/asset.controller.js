@@ -15,6 +15,19 @@ const Type = require("../models/type");
 const Value = require("../models/value");
 const Warranty = require("../models/warranty");
 
+exports.allEmployees = (req, res) => {
+  // knex.raw("SELECT * FROM types WHERE id=?", [2])
+  knex.raw("SELECT * FROM testcompany")
+  .then((result)=>{
+    res.send(result[0]);
+    console.log("Result is : ", result[0]);
+  })
+  .catch((err) => {
+    res.send(err);
+    console.log(err);
+  });
+};
+
 
 
 exports.createComment = (req, res) => {
