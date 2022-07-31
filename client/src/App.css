@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+}
+  
+table {
+  border: 2px solid forestgreen;
+  width: 100%;
+  height: 100%;
+  margin: 50px;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
+}

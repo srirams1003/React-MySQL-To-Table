@@ -51,6 +51,8 @@ module.exports = (app) => {
     router.delete("/subType/:id", assets.deleteSubType);
     router.delete("/asset/:id", assets.deleteAsset);
 
+    router.get("/allEmployees", assets.allEmployees);
+
 
     // // Create a new Tutorial
     // router.post("/", assets.create);
