@@ -10,7 +10,6 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm start\" \"npm run client\""
   },
-  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
