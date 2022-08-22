@@ -53,7 +53,6 @@ module.exports = (app) => {
 
     router.get("/allEmployees", assets.allEmployees);
 
-
     // // Create a new Tutorial
     // router.post("/", assets.create);
 

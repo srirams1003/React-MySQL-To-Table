@@ -5,14 +5,23 @@ import ReactJson from 'react-json-view';
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
+// const firebaseConfig = {
+//     apiKey: "AIzaSyDqG4DEYjEu_W_pGk_o844Jdav4hEiMOPY",
+//     authDomain: "cloudstoretest-7f7de.firebaseapp.com",
+//     projectId: "cloudstoretest-7f7de",
+//     storageBucket: "cloudstoretest-7f7de.appspot.com",
+//     messagingSenderId: "350697386944",
+//     appId: "1:350697386944:web:961be4618956e1055cce25",
+//     measurementId: "G-G88NRDSKME"
+// };
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDqG4DEYjEu_W_pGk_o844Jdav4hEiMOPY",
-    authDomain: "cloudstoretest-7f7de.firebaseapp.com",
-    projectId: "cloudstoretest-7f7de",
-    storageBucket: "cloudstoretest-7f7de.appspot.com",
-    messagingSenderId: "350697386944",
-    appId: "1:350697386944:web:961be4618956e1055cce25",
-    measurementId: "G-G88NRDSKME"
+  apiKey: "AIzaSyA9xfy2Z0AnJT5_OtOiYEoIVtvWw_DC-QQ",
+  authDomain: "fb-test-360202.firebaseapp.com",
+  projectId: "fb-test-360202",
+  storageBucket: "fb-test-bucket-hap",
+  messagingSenderId: "1085750363388",
+  appId: "1:1085750363388:web:ec51999982c1bf22d98379"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -22,8 +31,20 @@ getDownloadURL(ref(storage, 'cstore.txt'))
   .then(async (url) => {
     console.log(url);
 
-    let response = await fetch(url);
-    response = await response.text();
+    let body_obj = {
+      url: url
+    };
+
+    let params = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body_obj)
+    };
+
+    let response = await fetch('/sendCorsRequest', params);
+    response = await response.json();
     console.log(response);
   })
   .catch((error) => {

@@ -2,15 +2,26 @@ const express = require("express");
 
 const app = express();
 
+const cors = require('cors');
+
+app.use(cors());
+
 app.use(express.json());
+let fetch = require("cross-fetch");
 
 app.use(express.static("public"));
 
 require("./app/routes/asset.routes")(app);
 
+app.post("/sendCorsRequest/", async (request, response)=>{ // TEST API CALL TO SEE IF SERVER IS UP
+  console.log("Server received a request at ", request.url);
 
+  let resp = await fetch(request.body.url);
+  resp = await resp.text();
+  console.log(resp);
 
-
+  response.json(resp);
+});
 
 // const MongoClient = require('mongodb').MongoClient;
 
