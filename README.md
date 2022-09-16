@@ -17,7 +17,7 @@ A React.js App that reads data from a MySQL database and displays it as a reader
 Please modify the .env file in the root directory of the app to accommodate the credentials of your local MySQL server.
 
 ### Installation
-I will assume that you have MySQL, Node.js, React.js, and npm installed and that you are in the root directory of this repository.
+I will assume that you have MySQL and Node.js installed and that you are in the root directory of this repository.
 Once you have the above packages installed, execute the steps below.
 
 * installing backend dependencies
