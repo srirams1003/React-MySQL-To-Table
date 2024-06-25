@@ -15,16 +15,13 @@ A React.js App that reads data from a MySQL database and displays it as a reader
 ## Getting Started
 
 
-### If you do not have mysql-server installed, follow these steps:
-
-
-To set up your MySQL server from scratch and configure it for your application, follow these steps:
+### If you do not have mysql-server installed, follow these steps (on Linux):
 
 1. **Install MySQL Server:**
 
    If MySQL is not already installed, install it using your package manager. For example, on Ubuntu:
 
-   ```bash
+   ```sh
    sudo apt update
    sudo apt install mysql-server
    ```
@@ -33,7 +30,7 @@ To set up your MySQL server from scratch and configure it for your application, 
 
    Run the MySQL secure installation script to set up the root password and secure your installation:
 
-   ```bash
+   ```sh
    sudo mysql_secure_installation
    ```
 
@@ -41,7 +38,7 @@ To set up your MySQL server from scratch and configure it for your application, 
 
 3. **Log in to MySQL as Root:**
 
-   ```bash
+   ```sh
    sudo mysql
    ```
 
@@ -49,7 +46,7 @@ To set up your MySQL server from scratch and configure it for your application, 
 
    Inside the MySQL shell, create the database and user, and grant the necessary privileges:
 
-   ```bash
+   ```sql
    CREATE DATABASE mysqlreact;
    
    CREATE USER 'reactapp'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY '12345';
