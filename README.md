@@ -49,8 +49,8 @@ A React.js App that reads data from a MySQL database and displays it as a reader
    ```sql
    CREATE DATABASE mysqlreact;
    
-   CREATE USER 'reactapp'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY '12345';
-   CREATE USER 'reactapp'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
+   CREATE USER 'reactapp'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY 'StrongPassword123!';
+   CREATE USER 'reactapp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'StrongPassword123!';
    
    GRANT ALL PRIVILEGES ON mysqlreact.* TO 'reactapp'@'127.0.0.1';
    GRANT ALL PRIVILEGES ON mysqlreact.* TO 'reactapp'@'localhost';
